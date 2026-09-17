@@ -1,6 +1,7 @@
-import { ScrollView, View } from 'react-native';
+import { ScrollView, View, StyleSheet} from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { PageHeader } from './components/PageHeader';
+import { PostCards } from './components/PostCards';
 
 export default function App() {
   return (
@@ -9,14 +10,10 @@ export default function App() {
         <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
           <View>
             <PageHeader />
+            <PostCards />
           </View>
         </ScrollView>
       </SafeAreaView>
     </SafeAreaProvider>
   );
 };
-
-
-
-
-
