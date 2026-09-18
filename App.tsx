@@ -8,7 +8,7 @@ export default function App() {
     <SafeAreaProvider style={{ flexGrow: 1 }}>
       <SafeAreaView style={{ flexGrow: 1 }}>
         <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-          <View>
+          <View style={styles.container}>
             <PageHeader />
             <PostCards />
           </View>
@@ -17,3 +17,13 @@ export default function App() {
     </SafeAreaProvider>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});

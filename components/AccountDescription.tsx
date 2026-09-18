@@ -1,4 +1,5 @@
 import { Text, Button, View, StyleSheet } from "react-native";
+import { PressableButton } from "./Buttons";
 
 export function AccountDescription () {
   return (
@@ -6,10 +7,7 @@ export function AccountDescription () {
       <Text style={styles.bio}>
         A blog devoted to anti-capitalist, anti-authoritarian and anti-colonial graffiti from around the world.
       </Text>
-      <Button
-        onPress={() => console.log("Yay button works")}
-        title="Ask me anything"
-      />
+      <PressableButton />
     </View>
   )
 };

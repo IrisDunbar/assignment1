@@ -18,9 +18,9 @@ function PostHeader () {
       style={styles.iconImageMini}
       resizeMode="contain"
 		/>
-		<Text>radicalgraff</Text>
+		<Text style={styles.postText}>radicalgraff</Text>
 		<Image 
-			source={require('../assets/meatball-menu-icon.svg')} 
+			source={require('../assets/meatball-menu-icon.png')} 
 			style={styles.meatballMenu}
       resizeMode="contain"
 		/>
@@ -33,41 +33,48 @@ function PostBody () {
 		<View>
 			<Image 
 				source={require('../assets/radGrafPost.jpg')}
-				style={styles.postImage} 
-      	resizeMode="contain"
+				style={styles.postImage}
+				resizeMode="contain"
 			/>
-			<Text>Anti-ICE sticker spotted in NYC</Text>
+			<Text style={styles.postText}>Anti-ICE sticker spotted in NYC</Text>
 		</View>
 	)
 };
 
 const styles = StyleSheet.create({
-	iconImageMini: {
-		width: 40,
-		height: 40,
-		borderRadius: 50,
-		marginHorizontal: 10,
-	},
 	postCard: {
 		flex: 1,
-		flexDirection: 'column',
-		justifyContent: 'center',
-    alignItems: 'center',
-		backgroundColor: '#00000000',
+		backgroundColor: '#000',
+		borderRadius: 10,
 		zIndex: 2,
 	},
 	postHeader: {
-		flex: 1,
 		justifyContent: 'center',
     alignItems: 'center',
 		flexDirection: "row",
-		paddingHorizontal: 20,
-		paddingVertical: 15,
+		paddingVertical: 5,
+		paddingHorizontal: 10,
+	},
+	iconImageMini: {
+		width: 45,
+		height: 45,
+		borderRadius: 50,
+		marginRight: 10,
 	},
 	postImage: {
 		maxWidth: 385,
+		maxHeight: 500,
 	},
 	meatballMenu: {
-		alignSelf: "flex-end"
+		width: 30,
+		height: 30,
+		alignSelf: 'flex-end',
+		marginLeft: 190,
+		marginBottom: 10
+	},
+	postText: {
+		color: '#fff',
+		paddingVertical: 20,
+		paddingHorizontal: 10,
 	}
 });
